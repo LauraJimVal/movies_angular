@@ -1,0 +1,18 @@
+<br>
+<h1 class="text-center">Películas disponibles</h1>
+<hr />
+<br>
+<div class="row row-cols-4">
+  <div class="card animated fadeIn" *ngFor="let pelicula of peliculas">
+    <img class="card-img-top" [src]="'assets/img/'+pelicula.img" />
+    <div class="card-body">
+      <h4 class="card-title">{{pelicula.titulo}}</h4>
+      <p class="card-text">{{ pelicula.sinopsis | smartTruncate:100}}</p>
+      <p class="card-text">Director: {{pelicula.direccion}}</p>
+      <p class="card-text">
+        <small class="text-muted">Año: {{pelicula.anio}}</small>
+      </p>
+      <a class="btn btn-outline-primary btn-block" [routerLink]="['/peliculas', pelicula.id]">Detalle</a>
+    </div>
+  </div>
+</div>
