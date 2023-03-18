@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-main {width: 80%; max-width: 1600px; margin: auto;}
+
+main {
+  width: 80%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+
